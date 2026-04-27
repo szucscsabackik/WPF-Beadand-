@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tn2wkdGSCVA=",
+  "dgSpecHash": "gzUAVWX3yVc=",
   "success": true,
   "projectFilePath": "H:\\12.B\\Progi\\5.WPF\\WPF-Beadand-\\Kaszinó\\Kaszinó.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\szucs.csaba\\.nuget\\packages\\extended.wpf.toolkit\\5.0.0\\extended.wpf.toolkit.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

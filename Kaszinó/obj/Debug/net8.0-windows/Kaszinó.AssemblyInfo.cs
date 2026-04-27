@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kaszinó")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98fb6b2ae9725507923150562577250e2ef69334")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d01a59613750677fc2b13fe8e8ce7d8d1d3db09")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kaszinó")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kaszinó")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
