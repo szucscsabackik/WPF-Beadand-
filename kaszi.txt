@@ -1,0 +1,54 @@
+Kaszi tud kezelni:
+asztalokat, statisztikát, játékos adatait ???
+Ha asztalok:
+játék tipus (rulett, bj, nem tom mik vannak meg, stb)
+asztal azonosito (id ig)
+jatekosok szama
+VIP jatekosok szama (mert mierrt ne)
+aktiv-e
+
+table osztaly.cs:
+string tyype
+int players
+int VIP
+bool active
+
+a magic szamitott tulajdonsag: VIP arany és nem tom milyen szoveg (pl full, empty)
+
+Mainwindow:
+bal oldalt listbox(osszes asztal)
+jobb oldalt:
+textbox: tipus
+updown: jatekos szam
+updown: vip jatekos
+checkbox: aktiv (ig épp jatszik a fuggoje)
+
+gombok:
+modosit, hozzaad, torol, ment/betolt
+
+image: grand_casino.stock.pdf.not.virus.exe.png
+
+binding: 
+listbox - asztalok listaja
+kivalasztott elem - meokbe belemenjen
+szamitott cucc - kulon megjelenitve
+
+szinvalt:
+ha VIP > 50% - arany
+ha tul sok jatekos - piros
+ha inaktiv - szurke
+
+tehat a crud tejes cucc:
+create . uj asztal
+read . lista
+update . kivalasztott modositasa
+delete . torles
+
+
+pls felso reszben menon nezne ki: osszes jatekos, osszes vip, atlag jatekos/asztal
+
+
+Doksihoz:
+kaszino hatekony mukodesenek kovetese
+cel asztalok kihasznalasa
+vip arany elemzese
