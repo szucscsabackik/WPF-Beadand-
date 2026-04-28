@@ -9,5 +9,30 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
 
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <ListBox/>
+            
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <StackPanel>
+                <tk:IntegerUpDown Value="1000"/>
+                <tk:IntegerUpDown/>
+                <TextBox/>
+                <CheckBox/>
+            </StackPanel>
+            
+            <StackPanel>
+                <Button Content="Mentés"/>
+                <Button Content="Hozzáad"/>
+                <Button Content="Módosít"/>
+                <Button Content="Töröl"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
