@@ -1,24 +1,68 @@
-﻿using System.Text;
+﻿using Microsoft.Win32;
+using System.Collections.ObjectModel;
+using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kaszinó
+namespace casino
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ObservableCollection<Table> tables;
+        private Dictionary<string, ObservableCollection<Table>> tablesByType;
+
         public MainWindow()
         {
             InitializeComponent();
+            Tables = new();
+            tablesByType = new();
+        }
+
+        public ObservableCollection<Table> Tables { get => tables; set => tables = value; }
+
+        private void Button_Load(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.InitialDirectory = Directory.GetCurrentDirectory();
+            bool success = dialog.ShowDialog() ?? false;
+            if (!success) return;
+            string path = dialog.FileName;
+            using StreamReader sr = new StreamReader(path);
+            while (!sr.EndOfStream)
+            {
+                string[] temp = sr.ReadLine()!.Split(";");
+                string type = temp[0];
+                string name = temp[1];
+                bool active = bool.Parse(temp[2]);
+                int spaces = int.Parse(temp[3]);
+                Table table = new(type,name,active,spaces);
+                tables.Add(table);
+            }
+            AddListboxtable(tables);
+        }
+
+        private void AddListboxtable(ObservableCollection<Table> tables)
+        {
+            foreach (Table table in tables)
+            {
+                if (!tablesByType.ContainsKey(table.Type))
+                {
+                    tablesByType.Add(table.Type,new  ObservableCollection<Table>((IEnumerable<Table>)table));
+                } else
+                {
+                    tablesByType[table.Type].Add(table);
+                }
+            }
         }
     }
 }

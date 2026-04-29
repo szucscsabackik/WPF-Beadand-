@@ -1,0 +1,61 @@
+blackjack;Arany Elefánt;true;5
+rulett;Piros Sárkány;true;8
+poker;Királyok Asztala;false;6
+blackjack;Fekete Gyémánt;true;4
+rulett;Ezüst Hold;true;10
+poker;Vakmerő Lapok;false;7
+blackjack;Tigris Szerencséje;true;3
+rulett;Zöld Kerék;true;12
+poker;Full House Klub;true;9
+blackjack;Arany Kártya;false;6
+rulett;Rubin Kör;true;8
+poker;Blöff Mesterei;true;5
+blackjack;Kaszinó Csillag;true;2
+rulett;Fekete Pörgettyű;false;11
+poker;Zseton Bajnokok;true;10
+blackjack;Szerencse Lovagjai;true;4
+rulett;Kék Villám;true;7
+poker;Royal Flush;false;8
+blackjack;Titkos Ász;true;6
+rulett;Arany Spirál;true;9
+poker;Zöld Asztal;true;5
+blackjack;Dupla vagy Semmi;false;3
+rulett;Vörös Kör;true;12
+poker;Lapvadászok;true;6
+blackjack;Fekete Király;true;4
+rulett;Ezüst Pörgés;false;8
+poker;High Stakes;true;9
+blackjack;Szerencsekerék;true;5
+rulett;Arany Golyó;true;10
+poker;All In Klub;false;7
+blackjack;Villám Ász;true;6
+rulett;Király Kerék;true;12
+poker;Póker Arcok;true;8
+blackjack;Dupla Ász;false;3
+rulett;Zöld Mezős;true;9
+poker;Zseton Vadász;true;5
+blackjack;Arany Álom;true;4
+rulett;Fekete Kör;false;11
+poker;Nagy Tétek;true;10
+blackjack;Kaszinó Szíve;true;6
+rulett;Rubin Pörgés;true;8
+poker;Lap Zsonglőrök;false;7
+blackjack;Szerencse Ászai;true;5
+rulett;Ezüst Kerék;true;12
+poker;Full Tilt;true;9
+blackjack;Fekete Szerencse;false;4
+rulett;Piros Villám;true;10
+poker;Blöff Királyok;true;6
+blackjack;Arany Lapok;true;3
+rulett;Zöld Spirál;false;8
+poker;Royal Klub;true;9
+blackjack;Kártya Mesterek;true;5
+rulett;Fekete Golyó;true;11
+poker;Nyerő Széria;false;7
+blackjack;Dupla Esély;true;4
+rulett;Arany Kör;true;12
+poker;Lap Legendák;true;8
+blackjack;Szerencse Birodalom;false;6
+rulett;Rubin Kerék;true;10
+baccarat;Császár Udvara;true;7
+craps;Dobókocka Király;true;9

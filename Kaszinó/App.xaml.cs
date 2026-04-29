@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace Kaszinó
+namespace casino
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -1,9 +1,9 @@
-<Window x:Class="Kaszinó.MainWindow"
+<Window x:Class="casino.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Kaszinó"
+        xmlns:local="clr-namespace:casino"
         xmlns:tk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="Kaszinó Manager"
@@ -27,12 +27,12 @@
             <Menu Grid.Row="0">
                 <MenuItem Header="Menü">
                     <MenuItem Header="Mentés"/>
-                    <MenuItem Header="Betöltés"/>
+                    <MenuItem Header="Betöltés" Click="Button_Load"/>
                     <MenuItem Header="Hozzáadás"/>
                     <MenuItem Header="Törlés"/>
                 </MenuItem>
             </Menu>
-            <ListBox Grid.Row="1"/>
+            <ListBox Grid.Row="1" Name="Listbox_table"/>
         </Grid>
 
 
@@ -45,12 +45,12 @@
         <Grid Grid.Column="1">
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="4*"/>
             </Grid.RowDefinitions>
 
 
@@ -65,20 +65,20 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Column="0"
-                           Text="Osszes jatekos"
+                <Label Grid.Column="0"
+                           Content="Osszes jatekos"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            Margin="5"/>
 
-                <TextBlock Grid.Column="1"
-                           Text="Osszes VIP"
+                <Label Grid.Column="1"
+                           Content="Osszes VIP"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            Margin="5"/>
 
-                <TextBlock Grid.Column="2"
-                           Text="Atlag jatekos"
+                <Label Grid.Column="2"
+                           Content="Atlag jatekos"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            Margin="5"/>
@@ -178,10 +178,18 @@
             <Border Grid.Row="4"
                     Margin="5"
                     Padding="10">
-
-                <TextBlock Text="Nyereséges / Veszteséges"
-                           FontSize="16"
-                           HorizontalAlignment="Center"/>
+                <FlowDocumentPageViewer>
+                    <FlowDocument>
+                        <Table>
+                            <Table.Columns>
+                                <TableColumn/>
+                                <TableColumn/>                
+                                <TableColumn/>
+                            </Table.Columns>
+                        </Table>
+                    </FlowDocument>
+                </FlowDocumentPageViewer>
+                
             </Border>
 
 
