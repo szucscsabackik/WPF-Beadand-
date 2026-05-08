@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Text;
 using System.Windows;
@@ -16,24 +17,32 @@ namespace casino
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window , INotifyPropertyChanged
     {
         private ObservableCollection<Table> tables;
         private Dictionary<string, ObservableCollection<Table>> tablesByType;
+        private ObservableCollection<string> Keys;
+
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         public MainWindow()
         {
             InitializeComponent();
             Tables = new();
             tablesByType = new();
+            DataContext = this;
+            Keys1 = new();
         }
 
         public ObservableCollection<Table> Tables { get => tables; set => tables = value; }
+        public ObservableCollection<string> Keys1 { get => Keys;
+            set { Keys = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Keys)));} }
 
         private void Button_Load(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.InitialDirectory = Directory.GetCurrentDirectory();
+            //dialog.InitialDirectory = "H:\12.B\Progi\5.WPF\WPF - Beadand-\Kaszinó";
             bool success = dialog.ShowDialog() ?? false;
             if (!success) return;
             string path = dialog.FileName;
@@ -57,12 +66,19 @@ namespace casino
             {
                 if (!tablesByType.ContainsKey(table.Type))
                 {
-                    tablesByType.Add(table.Type,new  ObservableCollection<Table>((IEnumerable<Table>)table));
+                    tablesByType.Add(table.Type, new ObservableCollection<Table>());
+                    tablesByType[table.Type].Add(table);
                 } else
                 {
                     tablesByType[table.Type].Add(table);
                 }
             }
+            foreach (var key in tablesByType.Keys)
+            {
+                MessageBox.Show(key);
+                Keys1.Append(key);
+            }
+
         }
     }
 }

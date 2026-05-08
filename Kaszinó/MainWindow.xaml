@@ -32,7 +32,8 @@
                     <MenuItem Header="Törlés"/>
                 </MenuItem>
             </Menu>
-            <ListBox Grid.Row="1" Name="Listbox_table"/>
+            <ListBox ItemsSource="{Binding Keys}" 
+                Grid.Row="1" Name="Listbox_table"/>
         </Grid>
 
 
